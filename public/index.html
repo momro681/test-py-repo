@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f5">
+    <title>wrightnote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="notes-header">
+        <a class="brand" href="/" aria-label="wrightnote home">wrightnote</a>
+        <p>Your space for thoughts and ideas</p>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Dark mode</button>
+    </header>
+
+    <main class="notes-workspace">
+        <aside class="notes-sidebar" aria-label="Saved notes">
+            <div class="notes-sidebar-heading">
+                <h2>Your notes</h2>
+                <button class="new-note-button" id="newNote" type="button">+ New note</button>
+            </div>
+            <div id="notesList" class="notes-list" aria-live="polite">
+                <p class="notes-empty">Loading your notes...</p>
+            </div>
+        </aside>
+
+        <section class="note-editor" aria-label="Note editor">
+            <p class="eyebrow">A fresh page</p>
+            <label class="visually-hidden" for="noteTitle">Note title</label>
+            <input id="noteTitle" class="note-title" type="text" maxlength="120" placeholder="Untitled note" autocomplete="off">
+            <label class="visually-hidden" for="noteContent">Write your note</label>
+            <textarea id="noteContent" class="note-content" placeholder="Start writing your note..." autofocus></textarea>
+            <div class="note-editor-footer">
+                <p id="saveStatus" role="status">Your ideas are yours to keep.</p>
+                <div class="note-actions">
+                    <button class="delete-note-button" id="deleteNote" type="button" hidden>Delete note</button>
+                    <button class="save-note-button" id="saveNote" type="button">Save note</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
